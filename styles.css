@@ -1,0 +1,105 @@
+body {
+    background: #5f9fff;
+    padding: 40px;
+    font-family: courier;
+}
+
+.button-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.container {
+    display: flex;
+    /*flex-flow: row wrap; */
+    justify-content:space-around;
+}
+
+.card {
+    flex: none;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+}
+
+.user-container {
+    text-align: center; 
+}
+
+#word, #word-type, #translation {
+    margin-top: 10px;
+    margin-bottom: 10px;;
+    text-align: center;
+    font-weight: bold;
+}
+
+.translation {
+    display: none;
+}
+
+.translation.show {
+    display: block;
+}
+
+#answer {
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #818181;
+    border-radius: 5px;
+    /*margin: auto;*/
+    margin-left: 15%;
+}
+
+#answer.green {
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    transition: box-shadow linear 1s;
+    box-shadow: 0px 0px 15px 5px green;
+    /*margin: auto;*/
+    margin-left: 15%;
+}
+
+#answer.red {
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    transition: box-shadow linear 1s;
+    box-shadow: 0px 0px 15px 5px red;
+    /*margin: auto;*/
+    margin-left: 15%;
+}
+
+.card-button {
+    /*width: 20%;
+    margin-top: 10px;*/
+    border: 1px solid #0070bb;
+    background: white;
+    color: #0070bb;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.show-button {
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #0070bb;
+    background: white;
+    color: #0070bb;
+    border-radius: 5px;
+}
+
+img {
+    width: 400px;
+    height: 488px;
+}
+
+.deck-button {
+    background:yellow
+}
+
+.deck-button.highlight {
+    background: red;
+}
