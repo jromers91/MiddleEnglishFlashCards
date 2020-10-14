@@ -97,9 +97,11 @@ img {
 }
 
 .deck-button {
+    text-align: center;
     background:yellow
 }
 
 .deck-button.highlight {
+    text-align: center;
     background: red;
 }

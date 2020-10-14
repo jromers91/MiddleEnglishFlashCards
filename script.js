@@ -979,7 +979,7 @@ $(document).ready(function(){
         wordtype: "Knight's Tale",
         picture : "https://imgur.com/5uU6wXt.png",
         word: "steven",
-        answertext : "sound"
+        answertext : "voice"
       },
 
       card111 = {
@@ -1647,9 +1647,99 @@ $(document).ready(function(){
       },
 
     ];
-    for (var i = 0; i < arr.length; i++) {
-        deck.push(arr[Math.floor(Math.random() * arr.length)]);
+
+    Knight();
+    General();
+    Reeve();
+    Wife();
+    Nun();
+    secondNun();
+    canonYeoman();
+    Manciple();
+    
+    var generalWords = arr.filter(function(el) {
+      return el.wordtype == "General Words";
+    });
+
+    var knightWords = arr.filter(function(el) {
+      return el.wordtype == "Knight's Tale";
+    });
+
+    var reeveWords = arr.filter(function(el) {
+      return el.wordtype == "Reeve's Tale";
+    });
+
+    var wifeWords = arr.filter(function(el) {
+      return el.wordtype == "Wife of Bath's Prologue";
+    });
+
+    var nunPriestWords = arr.filter(function(el) {
+      return el.wordtype == "Nun’s Priest’s Prologue and Tale";
+    });
+
+    var secondNunWords = arr.filter(function(el) {
+      return el.wordtype == "Second Nun’s Prologue and Tale";
+    });
+
+    var canonYeomanWords = arr.filter(function(el) {
+      return el.wordtype == "Canon Yeoman’s Prologue and Tale";
+    });
+
+    var mancipleWords = arr.filter(function(el) {
+      return el.wordtype == "Manciple’s Prologue and Tale";
+    });
+
+    function General() {
+      $('#general-words').click(function () {
+        deck = generalWords
+      })
     }
+
+    function Knight() {
+      $('#knight').click(function () {
+        deck = knightWords;
+      })
+    }
+
+    function Reeve() {
+      $('#reeve').click(function () {
+        deck = reeveWords
+      })
+    }
+
+    function Wife() {
+      $('#wife-of-bath').click(function () {
+        deck = wifeWords
+      })
+    }
+
+    function Nun() {
+      $('#nun-priest').click(function () {
+        deck = nunPriestWords
+      })
+    }
+
+    function secondNun() {
+      $('#second-nun').click(function () {
+        deck = secondNunWords
+      })
+    }
+
+    function canonYeoman() {
+      $('#canon-yeoman').click(function () {
+        deck = canonYeomanWords
+      })
+    }
+
+    function Manciple() {
+      $('#manciple').click(function () {
+        deck = mancipleWords
+      })
+    }
+
+    for (var i = 0; i < arr.length; i++) {
+      deck.push(arr[Math.floor(Math.random() * arr.length)]);
+  }
     
     //deck.push(arr[1]);
     
