@@ -1135,13 +1135,13 @@ $(document).ready(function(){
         answertext : "bag"
       },
 
-      card129 = {
+      /*card129 = {
         card: 129,
         wordtype: "Reeve's Tale",
         picture : "https://imgur.com/byoyoBn.png",
         word: "throte-bolle",
-        answertext : "Adam\’s apple"
-      },
+        answertext : "Adam's apple"
+      },*/
 
       card130 = {
         card: 130,
