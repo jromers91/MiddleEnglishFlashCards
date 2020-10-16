@@ -1,5 +1,8 @@
 body {
-    background: #CCAB4B;
+    background-image: url("https://imgur.com/8tghSzC.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background: #CCAB4B;*/
     /*padding: 40px;*/
     font-family: 'MedievalSharp', cursive;
     margin: 0;
@@ -114,7 +117,7 @@ header {
 img {
     width: 400px;
     height: 488px;
-    border: 1px solid black;
+    border: 5px solid black;
 }
 
 .deck-button {
