@@ -63,6 +63,7 @@ $(document).ready(function(){
     //Changes the background color of the filter buttons by changing its class
     function changeColor($) {
         $('.deck-button').click(function () {
+          $(".deck-button").not(this).removeClass("highlight");
             $(this).toggleClass('highlight')
         })
     }
@@ -1700,51 +1701,67 @@ $(document).ready(function(){
     function General() {
       $('#general-words').click(function () {
         deck = generalWords
+        Draw();
+        ClearText();
       })
     }
 
     function Knight() {
       $('#knight').click(function () {
         deck = knightWords;
+        Draw();
+        ClearText();
       })
     }
 
     function Reeve() {
       $('#reeve').click(function () {
         deck = reeveWords
+        Draw();
+        ClearText();
       })
     }
 
     function Wife() {
       $('#wife-of-bath').click(function () {
         deck = wifeWords
+        Draw();
+        ClearText();
       })
     }
 
     function Nun() {
       $('#nun-priest').click(function () {
         deck = nunPriestWords
+        Draw();
+        ClearText();
       })
     }
 
     function secondNun() {
       $('#second-nun').click(function () {
         deck = secondNunWords
+        Draw();
+        ClearText();
       })
     }
 
     function canonYeoman() {
       $('#canon-yeoman').click(function () {
         deck = canonYeomanWords
+        Draw();
+        ClearText();
       })
     }
 
     function Manciple() {
       $('#manciple').click(function () {
         deck = mancipleWords
+        Draw();
+        ClearText();
       })
     }
-    
+
       for (var i = 0; i < arr.length; i++) {
       deck.push(arr[Math.floor(Math.random() * arr.length)]);
   }
