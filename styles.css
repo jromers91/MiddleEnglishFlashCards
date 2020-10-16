@@ -1,13 +1,23 @@
 body {
-    background: #5f9fff;
-    padding: 40px;
-    font-family: courier;
+    background: #CCAB4B;
+    /*padding: 40px;*/
+    font-family: 'MedievalSharp', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #CC220C;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 10px solid gold;
 }
 
 .button-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+
 }
 
 .container {
@@ -18,10 +28,11 @@ body {
 
 .card {
     flex: none;
-    margin-top: 10px;
+    margin-top: 40px;
     padding: 20px;
     border-radius: 10px;
     background: white;
+    box-shadow: 10px 10px 20px 5px black;
 }
 
 .user-container {
@@ -31,6 +42,13 @@ body {
 #word, #word-type, #translation {
     margin-top: 10px;
     margin-bottom: 10px;;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+#title {
+    font-size: 32px;
     text-align: center;
     font-weight: bold;
 }
@@ -75,33 +93,40 @@ body {
 .card-button {
     /*width: 20%;
     margin-top: 10px;*/
-    border: 1px solid #0070bb;
+    border: 1px solid #07529B;
     background: white;
     color: #0070bb;
     text-align: center;
     border-radius: 5px;
+    font-family:'MedievalSharp', cursive;
 }
 
 .show-button {
     width: 100%;
     margin-top: 10px;
-    border: 1px solid #0070bb;
+    border: 1px solid #07529B;
     background: white;
     color: #0070bb;
     border-radius: 5px;
+    font-family:'MedievalSharp', cursive;
 }
 
 img {
     width: 400px;
     height: 488px;
+    border: 1px solid black;
 }
 
 .deck-button {
     text-align: center;
-    background:yellow
+    background:white;
+    font-family:'MedievalSharp', cursive;
+    font-size: 18px;
+    padding: 5px;
+    box-shadow: 0px 0px 10px 0px black;
 }
 
 .deck-button.highlight {
     text-align: center;
-    background: red;
+    background: gold;
 }

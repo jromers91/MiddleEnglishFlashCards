@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var deck = new Array();
+    var deck = [];
     var currcard = null;
 
     Init();
@@ -31,12 +31,14 @@ $(document).ready(function(){
       });
     }
 
+    //Implements the Show button on the card to show the answer
     function Show() {
       $('#click-answer').click(function() {
         $('.translation').toggleClass('show')
       })
     }
 
+    //Allows the enter key to be pressed when the text box is selected to submit the answer
     function enter() {
       $("#answer").keyup(function (event) {
       if (event.keyCode == 13) {
@@ -45,7 +47,8 @@ $(document).ready(function(){
     });
   }
 
-      function ClearText() {
+    //Clears the text when the right answer is submitted
+    function ClearText() {
         $("#answer").val("");
         $('.translation').removeClass('show');
         $("#answer").removeClass();
@@ -57,14 +60,15 @@ $(document).ready(function(){
         $("#answer").removeClass();
       }*/
 
-
-      function changeColor($) {
+    //Changes the background color of the filter buttons by changing its class
+    function changeColor($) {
         $('.deck-button').click(function () {
             $(this).toggleClass('highlight')
         })
     }
-
-      function Draw() {
+    
+    //Draws a card from the deck to display on the webpage with all of its components from the object
+    function Draw() {
         currcard  =  deck.shift();
         $('#word-type').text(currcard.wordtype);
         $("#a").attr("src", currcard.picture);
@@ -72,15 +76,19 @@ $(document).ready(function(){
         $('#translation').text(currcard.answertext);
       }
 
-      function greenBorder() {
+
+    //Generates a green border around the text box when the right answer is submitted by changing the class  
+    function greenBorder() {
         $("#answer").removeClass('red');
         $("#answer").addClass('green')
       }
 
-      function redBorder() {
+    //Generates a red border around the text box when an incorrect answer is submitted by changing the class
+    function redBorder() {
         $("#answer").addClass('red')
       }
 
+    //Holds all objects of the deck in an array, holds the functions for the filter, and holds the function for generating a card to be Drawn
     function Init() {
     
     var arr = [
@@ -275,7 +283,7 @@ $(document).ready(function(){
         wordtype: "General Words",
         picture : "https://imgur.com/4r5UdHH.png",
         word: "echo",
-        answertext : "each one "
+        answertext : "each one"
       },
 
       card24 = {
@@ -379,7 +387,7 @@ $(document).ready(function(){
         wordtype: "General Words",
         picture : "https://imgur.com/4r5UdHH.png",
         word: "him lest",
-        answertext : "he wants "
+        answertext : "he wants"
       },
 
       card37 = {
@@ -1464,7 +1472,7 @@ $(document).ready(function(){
 
       card171 = {
         card: 171,
-        wordtype: "Canon Yeoman’s Prologue and Tale",
+        wordtype: "Yeoman’s Prologue and Tale",
         picture : "https://imgur.com/wAfwLXM.png",
         word: "slideth",
         answertext : "slides"
@@ -1472,7 +1480,7 @@ $(document).ready(function(){
 
       card172 = {
         card: 172,
-        wordtype: "Canon Yeoman’s Prologue and Tale",
+        wordtype: "Yeoman’s Prologue and Tale",
         picture : "https://imgur.com/wAfwLXM.png",
         word: "quelle",
         answertext : "kill"
@@ -1480,7 +1488,7 @@ $(document).ready(function(){
 
       card173 = {
         card: 173,
-        wordtype: "Canon Yeoman’s Prologue and Tale",
+        wordtype: "Yeoman’s Prologue and Tale",
         picture : "https://imgur.com/wAfwLXM.png",
         word: "sublymed",
         answertext : "purified"
@@ -1488,7 +1496,7 @@ $(document).ready(function(){
 
       card174 = {
         card: 174,
-        wordtype: "Canon Yeoman’s Prologue and Tale",
+        wordtype: "Yeoman’s Prologue and Tale",
         picture : "https://imgur.com/wAfwLXM.png",
         word: "elvysshe",
         answertext : "mysterious"
@@ -1496,7 +1504,7 @@ $(document).ready(function(){
 
       card175 = {
         card: 175,
-        wordtype: "Canon Yeoman’s Prologue and Tale",
+        wordtype: "Yeoman’s Prologue and Tale",
         picture : "https://imgur.com/wAfwLXM.png",
         word: "multiplicaccioun",
         answertext : "transmutation"
@@ -1504,7 +1512,7 @@ $(document).ready(function(){
 
       card176 = {
         card: 176,
-        wordtype: "Canon Yeoman’s Prologue and Tale",
+        wordtype: "Yeoman’s Prologue and Tale",
         picture : "https://imgur.com/wAfwLXM.png",
         word: "mollificacioun",
         answertext : "softening"
@@ -1512,7 +1520,7 @@ $(document).ready(function(){
 
       card177 = {
         card: 177,
-        wordtype: "Canon Yeoman’s Prologue and Tale",
+        wordtype: "Yeoman’s Prologue and Tale",
         picture : "https://imgur.com/wAfwLXM.png",
         word: "induracioun",
         answertext : "hardening"
@@ -1520,7 +1528,7 @@ $(document).ready(function(){
 
       card178 = {
         card: 178,
-        wordtype: "Canon Yeoman’s Prologue and Tale",
+        wordtype: "Yeoman’s Prologue and Tale",
         picture : "https://imgur.com/wAfwLXM.png",
         word: "bitymes",
         answertext : "soon"
@@ -1528,7 +1536,7 @@ $(document).ready(function(){
 
       card179 = {
         card: 179,
-        wordtype: "Canon Yeoman’s Prologue and Tale",
+        wordtype: "Yeoman’s Prologue and Tale",
         picture : "https://imgur.com/wAfwLXM.png",
         word: "hals",
         answertext : "neck"
@@ -1536,7 +1544,7 @@ $(document).ready(function(){
 
       card180 = {
         card: 180,
-        wordtype: "Canon Yeoman’s Prologue and Tale",
+        wordtype: "Yeoman’s Prologue and Tale",
         picture : "https://imgur.com/wAfwLXM.png",
         word: "mortifye",
         answertext : "harden"
@@ -1544,7 +1552,7 @@ $(document).ready(function(){
 
       card181 = {
         card: 181,
-        wordtype: "Canon Yeoman’s Prologue and Tale",
+        wordtype: "Yeoman’s Prologue and Tale",
         picture : "https://imgur.com/wAfwLXM.png",
         word: "byjaped",
         answertext : "tricked"
@@ -1682,7 +1690,7 @@ $(document).ready(function(){
     });
 
     var canonYeomanWords = arr.filter(function(el) {
-      return el.wordtype == "Canon Yeoman’s Prologue and Tale";
+      return el.wordtype == "Yeoman’s Prologue and Tale";
     });
 
     var mancipleWords = arr.filter(function(el) {
@@ -1736,10 +1744,13 @@ $(document).ready(function(){
         deck = mancipleWords
       })
     }
-
-    for (var i = 0; i < arr.length; i++) {
+    
+      for (var i = 0; i < arr.length; i++) {
       deck.push(arr[Math.floor(Math.random() * arr.length)]);
   }
+
+
+  
     
     //deck.push(arr[1]);
     
